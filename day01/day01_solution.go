@@ -9,9 +9,8 @@ import (
 	"sort"
 )
 
-
 // Read a file and return a slice with the lines.
-func readLines(filename string) ([]string, error) {
+func ReadLines(filename string) ([]string, error) {
     file, err := os.Open(filename)
     if err != nil {
         return nil, err
@@ -28,9 +27,9 @@ func readLines(filename string) ([]string, error) {
 
 
 // Read the given file  and return as two sorted slices.
-func get_sort_slices(filename string) ([]int, []int) {
+func Get_sort_slices(filename string) ([]int, []int) {
 	// Load the input into an array.
-    lines, _ := readLines(filename)
+    lines, _ := ReadLines(filename)
 
 	// Extract fields, convert to ints and append to slices.
 	var a_ops []int
@@ -53,7 +52,7 @@ func get_sort_slices(filename string) ([]int, []int) {
 
 // Calculate the absolute diffeerence between
 // the given values.
-func abs(x int, y int) int {
+func Abs(x int, y int) int {
 	if x < y {
 		return y - x
 	} else {
@@ -67,12 +66,12 @@ func problem1(fname string) {
 	var a_ops []int
 	var b_ops []int
 
-	a_ops, b_ops = get_sort_slices(fname)
+	a_ops, b_ops = Get_sort_slices(fname)
 	
 	// Loop over the slices and add diff.
 	diffsum := 0
 	for i := 0 ; i < len(a_ops) ; i += 1 {
-		diffsum += abs(a_ops[i], b_ops[i])
+		diffsum += Abs(a_ops[i], b_ops[i])
 	}
 	fmt.Println("Total distance:", diffsum)
 }
@@ -83,7 +82,7 @@ func problem2(fname string) {
 	var a_ops []int
 	var b_ops []int
 
-	a_ops, b_ops = get_sort_slices(fname)
+	a_ops, b_ops = Get_sort_slices(fname)
 
 	score := 0
 	// Loop over all elements in a_ops.
