@@ -9,6 +9,7 @@ import (
 	"sort"
 )
 
+
 // Read a file and return a slice with the lines.
 func ReadLines(filename string) ([]string, error) {
     file, err := os.Open(filename)
