@@ -28,7 +28,7 @@ func ReadLines(filename string) ([]string, error) {
 
 
 // Read the given file  and return as two sorted slices.
-func Get_sort_slices(filename string) ([]int, []int) {
+func GetSortSlices(filename string) ([]int, []int) {
 	// Load the input into an array.
     lines, _ := ReadLines(filename)
 
@@ -67,7 +67,7 @@ func problem1(fname string) {
 	var a_ops []int
 	var b_ops []int
 
-	a_ops, b_ops = Get_sort_slices(fname)
+	a_ops, b_ops = GetSortSlices(fname)
 	
 	// Loop over the slices and add diff.
 	diffsum := 0
@@ -83,7 +83,7 @@ func problem2(fname string) {
 	var a_ops []int
 	var b_ops []int
 
-	a_ops, b_ops = Get_sort_slices(fname)
+	a_ops, b_ops = GetSortSlices(fname)
 
 	score := 0
 	// Loop over all elements in a_ops.
