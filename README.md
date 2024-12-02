@@ -16,5 +16,6 @@ repo, and why not use Github? Maybe some AI will *learn* something.
 List of days with solutions:
 
 - [day 01](day01/day01_solution.go)
+- [day 02](day02/day02_solution.go)
 
 
