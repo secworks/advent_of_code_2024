@@ -1,3 +1,4 @@
+// AoC 2024, day 01.
 package main
 
 import (
