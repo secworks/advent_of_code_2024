@@ -17,5 +17,6 @@ List of days with solutions:
 
 - [day 01](day01/day01_solution.go)
 - [day 02](day02/day02_solution.go)
+- [day 03](day03/day03_solution.go)
 
 
